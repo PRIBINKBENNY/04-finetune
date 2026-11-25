@@ -9,6 +9,8 @@ Teach a 0.5B model a job it's bad at out of the box: turning messy job posts int
  "salary_min": 55000, "salary_max": 70000, "currency": "GBP", "skills": ["ros 2", "c++", "docker"]}
 ```
 
+![Dataset overview](docs/dataset.png)
+
 ## Run it (free Colab T4, ~30 min)
 
 Open [`notebooks/colab_finetune.ipynb`](notebooks/colab_finetune.ipynb), choose **Runtime → T4 GPU**, and run all cells. Or step by step:
@@ -60,7 +62,7 @@ Or merge it into the base weights and push to the Hub: `python -m finetune.merge
 
 ## Tests
 
-`pytest` (7 tests, no GPU): dataset determinism, uniqueness and label consistency; JSON parsing (fenced, chatty); metric normalisation; eval runner with oracle and naive predictors; config and training plan.
+`python -m finetune.figures` regenerates the dataset figure. `pytest` (7 tests, no GPU): dataset determinism, uniqueness and label consistency; JSON parsing (fenced, chatty); metric normalisation; eval runner with oracle and naive predictors; config and training plan.
 
 ## What I learned
 
