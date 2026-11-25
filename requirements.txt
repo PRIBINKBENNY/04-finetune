@@ -1,0 +1,10 @@
+# GPU training / eval (Colab T4). Tested API names against transformers 5.x, trl 1.x, peft 0.22
+torch
+transformers>=5.0
+trl>=1.0
+peft>=0.17
+bitsandbytes>=0.45
+datasets>=3.0
+accelerate>=1.0
+pyyaml
+openai>=1.40
